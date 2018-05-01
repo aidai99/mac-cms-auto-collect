@@ -8,10 +8,10 @@
 其他的按照黑框提示输入即可, 如图:
 
 ![image](https://github.com/wktadmin/mac-cms-auto-collect/blob/master/preview/tips.png)
-
-<br>
-<br><br><br>
-预览图
 <br><br>
+预览图
+<br>
 
 ![image](https://github.com/wktadmin/mac-cms-auto-collect/blob/master/preview/1.gif)
+<br>
+演示站: http://video.wktadmin.com/
