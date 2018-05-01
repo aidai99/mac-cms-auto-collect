@@ -20,7 +20,6 @@ class GetCookies(UserInfo):
     
 
     def checkLogin(self):
-        print("首次检测是否可以登录, 稍后..")
         url = self.baseUrl + '/admin/index.php?m=admin-index'
         html = self.sess.get(url, headers=headers).text
         # print(html)
