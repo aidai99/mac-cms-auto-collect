@@ -14,4 +14,4 @@
 
 ![image](https://github.com/wktadmin/mac-cms-auto-collect/blob/master/preview/1.gif)
 <br>
-演示站: http://video.wktadmin.com/
+
