@@ -30,7 +30,8 @@ class StartCollect(GetApiUrl):
             html = response.text
             self.pb.printLog(html)
         print('采集完毕')
-        return view.startprint()
+        import main
+        return main.run()
 
 
     # 获取全部:
@@ -49,7 +50,8 @@ class StartCollect(GetApiUrl):
             html = response.text
             self.pb.printLog(html)
         print("采集完毕")
-        return view.startprint()
+        import main
+        return main.run()
 
 
 if __name__ == '__main__':
