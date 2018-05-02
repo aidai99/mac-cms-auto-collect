@@ -10,10 +10,13 @@ softwarestatus = -1
 usi = UserInfo()
 
 def checkVersion():
-    global softwarestatus
-    softwarestatus = UserInfo().softwarestatus    
-    if softwarestatus == 1:
-        print("需要更新")
+    try:
+        global softwarestatus
+        softwarestatus = UserInfo().softwarestatus    
+        if softwarestatus == 1:
+            print("需要更新")
+    except:
+        return
 
 def run(): 
     startnum = startprint()
