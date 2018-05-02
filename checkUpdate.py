@@ -10,14 +10,15 @@ headers = Public.headers
 # 保存下载地址的地址:
 url = linkUrl.downUrl
 
-class MyVersion(object):   
-
+class MyVersion(object): 
     def __init__(self, curversion):
         # 当前版本
         self.__curVersion = curversion
         self.newVersion = self.getNewVersion       
 
     def __call__(self):
+        # 此句无用, 仅访问一次
+        requests.get(linkUrl.requestUrl)
         return self.check()
 
     # 最终弹窗控制
