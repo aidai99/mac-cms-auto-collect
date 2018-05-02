@@ -15,15 +15,7 @@ def checkVersion():
     if softwarestatus == 1:
         print("需要更新")
 
-def run():              
-    try:
-        print("稍后...")
-        GetCookies().checkLogin()
-    except:
-        print('配置出错,  已经为你重置')
-        os.remove(userinfo.filePath)
-        return run()           
-        
+def run(): 
     startnum = startprint()
     if startnum == 0 and softwarestatus == -1:
         choose = IndexList()
@@ -50,11 +42,20 @@ def run():
         return run()
 
         
-
-
+# 检测登录状态
+def checkcheck():
+    try:
+        print("稍后...")
+        GetCookies().checkLogin()
+        return
+    except:
+        print('配置出错,  已经为你重置')
+        os.remove(userinfo.filePath)
+        return checkcheck()
     
 
-if __name__ == '__main__': 
+if __name__ == '__main__':     
+    checkcheck()
     run_thread = threading.Thread(target=run)
     check_thread = threading.Thread(target=checkVersion)
     run_thread.start()
